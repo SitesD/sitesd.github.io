@@ -1,13 +1,24 @@
-
-var stroke="строка"; (можно без "var" и ";")
-<!DOCTYPE html>
 <html>
-<head>
-<title>Чтение из файла JS</title>
-<script src="3.txt" type="text/javascript"></script> 
-</head>
-<body>
-<!-- Содержимое файла "myfile.txt": 'stroke="My text."' -->
-Значение переменной "stroke": <script>document.write(stroke);</script>
-</body>
-</html>
+    <head>
+    <script>
+      var openFile = function(event) {
+        var input = event.target;
+
+        var reader = new FileReader();
+        reader.onload = function(){
+          var text = reader.result;
+          var node = document.getElementById('output');
+          node.innerText = text;
+          console.log(reader.result.substring(0, 200));
+        };
+        reader.readAsText(input.files[0]);
+      };
+    </script>
+    </head>
+    <body>
+    <input type='file' accept='text/plain' onchange='openFile(event)'><br>
+    <div id='output'>
+    ...
+    </div>
+    </body>
+    </html>
