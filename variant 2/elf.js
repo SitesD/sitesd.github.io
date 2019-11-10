@@ -1,5 +1,5 @@
 ﻿var cnv = document.getElementById('canvas'),
-	ctx = canv.getContext('2d');
+	ctx = cnv.getcontext('2d');
 	
 var	trava = new Image();
 	trava.src = "name.png";
