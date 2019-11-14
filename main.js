@@ -94,7 +94,7 @@ function step(f,iterations) {
   massive_data_arc = new_snow(randInt(3,50), massive_data_arc);}
   //console.log(massive_data_arc);
   if (iterations % options.speed == 0) {
-	  console.log('wbile_2 ',iterations);
+	  //console.log('wbile_2 ',iterations);
 	  for (var i = 0; i < massive_data_arc.length; i++) 
 	  {
 		//massive_data_arc[i].position_x = massive_data_arc[i].position_x-options.step;
@@ -140,10 +140,3 @@ window.addEventListener("resize", function() { //Just in case someone resizes th
   w = canvasBody.width = window.innerWidth;
   h = canvasBody.height = window.innerHeight;
 });
-/*
-function isNaturalNumber(n) {
-  n = n.toString(); // force the value incase it is not
-  var n1 = Math.abs(n),
-    n2 = parseInt(n, 10);
-  return !isNaN(n1) && n2 === n1 && n1.toString() === n;
-}*/
